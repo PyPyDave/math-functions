@@ -10,6 +10,8 @@ def selection(choice, number):
         return np.square(number)
     elif choice == 3:
         return np.power(number, 3)  # Cube of a number
+    elif choice == 4:
+        return np.cbrt(number)      # Cube root of a number
     else:
         print('Invalid input')
         return None
@@ -19,15 +21,16 @@ def show_menu():
     print("Select your choice from below:")
     print("1. To get the Square Root of a number")
     print("2. To get the Square of a number")
-    print("3. To get the Cube of a number")  # Added cube option
+    print("3. To get the Cube of a number")
+    print("4. To get the Cube Root of a number")  # Added cube root option
     print("0. Exit")
 
 while True:
     show_menu()
     try:
         mychoice = int(input("Enter your choice: "))
-        if mychoice not in [0, 1, 2, 3]:  # Added 3 to valid choices
-            print("Invalid choice. Please choose 0, 1, 2, or 3.")
+        if mychoice not in [0, 1, 2, 3, 4]:  # Added 4 to valid choices
+            print("Invalid choice. Please choose 0, 1, 2, 3, or 4.")
             continue
         if mychoice == 0:
             selection(0, 0)  # just to call exit()
